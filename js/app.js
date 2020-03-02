@@ -128,3 +128,50 @@ const {
 console.log(html, css);
 
 // Деуструктуризация функций
+
+function myPerson({
+  lastName,
+  firstName,
+  age,
+  info: {
+    skills
+  } = {}
+} = {}) {
+  console.log(skills);
+}
+
+// myPerson(newUser);
+
+// function foo(x, y, ...others) {
+//   console.log(arguments);
+//   const [...args] = arguments;
+//   console.log(others);
+// }
+
+// foo(1, 2, 5, 6);
+const numbers = [2, 3, 4, 5];
+
+function foo2(x, y, z) {
+  console.log(x, y, z);
+}
+
+foo2(...numbers);
+
+const organisation = {
+  name: 'Google',
+  info: {
+    employees: ['Vlad', 'Olga'],
+    partners: ['Microsoft', 'Facebook', 'Xing']
+  }
+};
+
+function getInfo({
+  name = 'Unknown',
+  info: {
+    partners,
+  }
+}) {
+  console.log(name, partners);
+}
+
+getInfo(organisation);

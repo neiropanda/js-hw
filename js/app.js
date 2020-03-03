@@ -157,17 +157,44 @@
 
 // foo2(...numbers);
 
-const organisation = {
-  name: 'Google',
-  info: {
-    employees: ['Vlad', 'Olga'],
-    partners: ['Microsoft', 'Facebook', 'Xing']
+// const organisation = {
+//   name: 'Google',
+//   info: {
+//     employees: ['Vlad', 'Olga'],
+//     partners: ['Microsoft', 'Facebook', 'Xing']
+//   }
+// };
+
+// function getInfo({
+//   name = 'Unknown',
+//   info: {
+//     partners
+//   }
+// }) {
+//   console.log(name);
+//   console.log(partners.slice(0, 2));
+// }
+
+// getInfo(organisation);
+
+
+// Object descriptor
+const car = {
+  brand: "Audio",
+  year: 2019,
+  get age() {
+    return `car was created in ${this.year}`;
+  },
+  set age(value) {
+    this.year = value;
   }
 };
 
-function getInfo({name = 'Unknown', info: {partners}}) {
-  console.log(name);
-  console.log(partners.slice(0,2));
-}
-
-getInfo(organisation);
+// Object.defineProperty(car, 'age', {
+//   // configurable: false,
+//   // enumerable: false,
+//   // writable: false,
+//   get: function () {
+//     return `car was created in ${this.year}`;
+//   }
+// });

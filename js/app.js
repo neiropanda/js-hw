@@ -72,90 +72,90 @@
 
 // Деструктуризация обьктов
 
-const user = {
-  firstName: 'sasha',
-  lastName: 'bekh',
-  age: 25,
-  info: {
-    work: 'easycode',
-    skills: ['html', 'css'],
-  }
-};
+// const user = {
+//   firstName: 'sasha',
+//   lastName: 'bekh',
+//   age: 25,
+//   info: {
+//     work: 'easycode',
+//     skills: ['html', 'css'],
+//   }
+// };
 
-// const {
-//   firstName: name,
-//   lastName,
-//   age = 30,
-// } = user;
+// // const {
+// //   firstName: name,
+// //   lastName,
+// //   age = 30,
+// // } = user;
 
+// // const {
+// //   info: {
+// //     work,
+// //     skills,
+// //   }
+// // } = user;
+
+// //console.log(work, skills);
+
+// // Деструктуризация массивов
+
+// const colors = ['white', 'black', 'red'];
+// const [w, b, r, g = 'green'] = colors;
+// console.log(w, b, r, g);
+// const names = ['denis', 'ivan', 'petya'];
+// const [name1, ...otherNames] = names;
+// console.log(name1, otherNames);
+// const nestedArr = ['hello world', ['key', 'value']];
+// const [, [key, value]] = nestedArr;
+// console.log(key, value);
+
+// // const [...newNames] = names;
+// const newNames = [...names];
+// // console.log(...newNames);
+
+// const colorNames = [...colors, ...names];
+// // console.log(colorNames);
+// const newUser = {
+//   ...user,
+//   age: 30,
+// };
+// console.log(newUser);
 // const {
 //   info: {
-//     work,
-//     skills,
+//     skills: [html, css],
 //   }
-// } = user;
+// } = newUser;
+// console.log(html, css);
 
-//console.log(work, skills);
+// // Деструктуризация функций
 
-// Деструктуризация массивов
-
-const colors = ['white', 'black', 'red'];
-const [w, b, r, g = 'green'] = colors;
-console.log(w, b, r, g);
-const names = ['denis', 'ivan', 'petya'];
-const [name1, ...otherNames] = names;
-console.log(name1, otherNames);
-const nestedArr = ['hello world', ['key', 'value']];
-const [, [key, value]] = nestedArr;
-console.log(key, value);
-
-// const [...newNames] = names;
-const newNames = [...names];
-// console.log(...newNames);
-
-const colorNames = [...colors, ...names];
-// console.log(colorNames);
-const newUser = {
-  ...user,
-  age: 30,
-};
-console.log(newUser);
-const {
-  info: {
-    skills: [html, css],
-  }
-} = newUser;
-console.log(html, css);
-
-// Деуструктуризация функций
-
-function myPerson({
-  lastName,
-  firstName,
-  age,
-  info: {
-    skills
-  } = {}
-} = {}) {
-  console.log(skills);
-}
-
-// myPerson(newUser);
-
-// function foo(x, y, ...others) {
-//   console.log(arguments);
-//   const [...args] = arguments;
-//   console.log(others);
+// function myPerson({
+//   lastName,
+//   firstName,
+//   age,
+//   info: {
+//     skills
+//   } = {}
+// } = {}) {
+//   console.log(skills);
 // }
 
-// foo(1, 2, 5, 6);
-const numbers = [2, 3, 4, 5];
+// // myPerson(newUser);
 
-function foo2(x, y, z) {
-  console.log(x, y, z);
-}
+// // function foo(x, y, ...others) {
+// //   console.log(arguments);
+// //   const [...args] = arguments;
+// //   console.log(others);
+// // }
 
-foo2(...numbers);
+// // foo(1, 2, 5, 6);
+// const numbers = [2, 3, 4, 5];
+
+// function foo2(x, y, z) {
+//   console.log(x, y, z);
+// }
+
+// foo2(...numbers);
 
 const organisation = {
   name: 'Google',
@@ -165,13 +165,9 @@ const organisation = {
   }
 };
 
-function getInfo({
-  name = 'Unknown',
-  info: {
-    partners,
-  }
-}) {
-  console.log(name, partners);
+function getInfo({name = 'Unknown', info: {partners}}) {
+  console.log(name);
+  console.log(partners.slice(0,2));
 }
 
 getInfo(organisation);

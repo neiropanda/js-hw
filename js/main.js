@@ -1,5 +1,5 @@
-const div = document.querySelector('div');
-const titles = document.querySelectorAll('h1');
+// const div = document.querySelector('div');
+// const titles = document.querySelectorAll('h1');
 // console.dir(titles);
 // console.log(Array.from(titles));
 // console.log([...titles]);
@@ -96,17 +96,17 @@ const titles = document.querySelectorAll('h1');
 
 // Классы
 
-class Animal {
-  constructor(options) {
-    this.name = options.name
-    this.age = options.age
-    this.hasTail = options.hasTail
-  }
+// class Animal {
+//   constructor(options) {
+//     this.name = options.name
+//     this.age = options.age
+//     this.hasTail = options.hasTail
+//   }
 
-  voice() {
-    console.log('i am animal');
-  }
-}
+//   voice() {
+//     console.log('i am animal');
+//   }
+// }
 
 // const animal = new Animal({
 //   name: 'lev',
@@ -232,26 +232,52 @@ class Animal {
 //   }
 // });
 
-const btn = document.querySelector('.btn');
-const wrap = document.querySelector('.wrap');
 
-btn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  console.log('click btn');
-});
+// let box = document.getElementById('box');
+// let btn = document.getElementsByTagName('button');
+// let circle = document.getElementsByClassName('circle');
+// let heart = document.querySelectorAll('.heart');
+// let oneHeart = document.querySelector('.heart');
+// let wrapper = document.querySelector('.wrapper');
 
-wrap.addEventListener('click', (e) => {
-  console.log('click wrap');
-});
+// box.style.backgroundColor = 'blue';
+// btn[1].style.borderRadius = '1000%';
 
-document.body.addEventListener('click', (e) => {
-  console.log('click body');
-});
+// circle[0].style.backgroundColor = 'red';
+// circle[1].style.backgroundColor = 'yellow';
+// circle[2].style.backgroundColor = 'green';
 
-wrap.addEventListener('click', (e) => {
-  console.log('click wrap');
-}, true);
 
-document.body.addEventListener('click', (e) => {
-  console.log('click body');
-}, true);
+// // for (let i = 0; i < heart.length; i++) {
+// //   heart[i].style.backgroundColor = 'black';
+// // };
+
+// heart.forEach(function (item, i, hearts) {
+//   item.style.backgroundColor = 'blue';
+//   // console.log(i);
+//   // console.log(hearts);
+// });
+
+// let div = document.createElement('div');
+// div.classList.add('black');
+
+// // document.body.appendChild(div);
+// // wrapper.appendChild(div);
+
+// // div.innerHTML = '<h1>hello, world!</h1>';
+// div.textContent = "hello, world!";
+
+// document.body.insertBefore(div, circle[0]);
+// document.body.removeChild(circle[1]);
+// wrapper.removeChild(heart[0]);
+
+
+// document.body.replaceChild(btn[1], circle[1]);
+
+
+
+
+// console.log(div);
+
+
+

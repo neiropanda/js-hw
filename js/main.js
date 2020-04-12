@@ -273,11 +273,36 @@
 
 
 // document.body.replaceChild(btn[1], circle[1]);
-
-
-
-
 // console.log(div);
 
 
+let btn = document.querySelectorAll('button');
+let wrap = document.querySelector('.wrapper');
+let link = document.querySelector('a');
 
+// btn[0].onclick = function () {
+//   alert('вы нажали первую кнопку');
+// };
+
+// btn[0].addEventListener('click', function (e) {
+//   console.log('произошл событие: ' + e.type + ' на элементе ' + e.target);
+// });
+
+// wrap.addEventListener('click', function (e) {
+//   console.log('произошл событие: ' + e.type + ' на элементе ' + e.target);
+// });
+
+link.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('произошл событие: ' + e.type + ' на элементе ' + e.target);
+});
+
+btn.forEach(function (item) {
+  item.addEventListener('mouseleave', function () {
+    console.log('вышли!');
+  });
+});
+
+// btn[0].addEventListener('mouseenter', function () {
+//   alert('вы навели на первую кнопку');
+// });
